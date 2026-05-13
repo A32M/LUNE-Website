@@ -123,10 +123,6 @@
   /* ── HERO ─────────────────────────────────────────── */
   .hero {
     background: var(--burgundy);
-    background-image: url('Cart-Picture__1_of_1_.jpg');
-    background-size: cover;
-    background-position: center 30%;
-    background-repeat: no-repeat;
     min-height: 92vh;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
@@ -136,22 +132,11 @@
     overflow: hidden;
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(55,8,18,0.62);
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  .hero > * { position: relative; z-index: 1; }
-
   .hero-eyebrow {
     font-family: var(--font-body);
     font-size: 11px; font-weight: 500;
     letter-spacing: 0.3em; text-transform: uppercase;
-    color: rgba(247,240,230,0.75);
+    color: var(--burgundy-soft);
     margin-bottom: 28px;
     animation: fadeUp 0.8s ease forwards; opacity: 0; animation-delay: 0.1s;
   }
@@ -179,7 +164,7 @@
     font-family: var(--font-display);
     font-size: clamp(18px, 2.5vw, 26px);
     font-weight: 300;
-    color: rgba(247,240,230,0.80);
+    color: var(--cream-dark);
     max-width: 480px;
     margin: 0 auto 52px;
     line-height: 1.6;
@@ -212,12 +197,12 @@
     font-size: 11px; font-weight: 500;
     letter-spacing: 0.2em; text-transform: uppercase;
     padding: 13px 32px;
-    border: 1px solid rgba(247,240,230,0.5);
+    border: 1px solid rgba(107,16,34,0.4);
     cursor: pointer; text-decoration: none; display: inline-block;
     transition: background 0.2s, border-color 0.2s;
   }
 
-  .btn-outline:hover { background: rgba(247,240,230,0.1); border-color: rgba(247,240,230,0.8); }
+  .btn-outline:hover { background: rgba(107,16,34,0.06); border-color: rgba(107,16,34,0.7); }
 
   /* Scroll cue */
   .hero-scroll {
@@ -228,12 +213,12 @@
 
   .hero-scroll span {
     font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
-    color: rgba(247,240,230,0.4); font-family: var(--font-body);
+    color: rgba(107,16,34,0.4); font-family: var(--font-body);
   }
 
   .scroll-line {
     width: 1px; height: 40px;
-    background: linear-gradient(to bottom, rgba(247,240,230,0.4), transparent);
+    background: linear-gradient(to bottom, rgba(107,16,34,0.35), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
   }
 
@@ -266,7 +251,7 @@
     font-family: var(--font-body);
     font-size: 10px; font-weight: 500;
     letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--burgundy-soft);
+    color: var(--burgundy);
     margin-bottom: 16px;
     display: block;
   }
@@ -520,7 +505,7 @@
     font-family: var(--font-body);
     font-size: 10px; font-weight: 500;
     letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--burgundy-soft); margin-bottom: 16px;
+    color: var(--burgundy); margin-bottom: 16px;
   }
 
   .social-links { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -560,7 +545,7 @@
     font-family: var(--font-body);
     font-size: 10px; font-weight: 500;
     letter-spacing: 0.25em; text-transform: uppercase;
-    color: var(--burgundy-soft); margin-bottom: 6px;
+    color: var(--burgundy); margin-bottom: 6px;
   }
 
   .contact-detail-value {
@@ -724,7 +709,7 @@
     <img
       src="IMG_1063.png"
       alt="LUNE"
-      style="width: clamp(240px, 40vw, 500px); height: auto; display: block; margin: 0 auto; filter: brightness(0) invert(1);"
+      style="width: clamp(160px, 22vw, 300px); height: auto; display: block; margin: 0 auto;"
       onerror="this.style.display='none'; this.parentElement.textContent='LUNE';"
     />
   </h1>
@@ -864,7 +849,7 @@
 <!-- ABOUT -->
 <section class="about" id="about">
   <div>
-    <span class="section-eyebrow" style="color: var(--burgundy-soft);">Who We Are</span>
+    <span class="section-eyebrow">Who We Are</span>
     <h2 class="section-title" style="color: var(--cream);">A cart.<br>A craft.<br>A community.</h2>
     <div class="section-rule" style="background: rgba(107,16,34,0.2);"></div>
     <p class="about-body">Lune started with a simple belief: that a great cup of coffee doesn't need four walls and a storefront. It needs care, quality ingredients, and a genuine love for the craft.</p>
